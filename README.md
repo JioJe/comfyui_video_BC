@@ -1,28 +1,25 @@
 # comfyui_video_BC
-ComfyUI Batch Video Loader &amp; Video Combine Nodes
-This repository provides two custom nodes for ComfyUI to enhance video processing capabilities:
 
-🚀 Features
-Batch Video Loader (batch_video_loader.py)
+These are two custom nodes for [ComfyUI](https://github.com/comfyanonymous/ComfyUI) designed to streamline video workflows: one for batch loading video frames and one for saving image sequences as videos with custom settings.
 
-Enables importing multiple videos simultaneously.
+## 🧩 Nodes Included
 
-Supports various video formats.
+### 1. VideoSequenceProcessor
+- Load frames from multiple videos in a directory.
+- Modes: load by index, auto-next, or random selection.
+- Optional resize, frame limit, and frame rate override.
+- Ideal for dataset preparation and animation workflows.
 
-Efficiently processes each video while maintaining batch integrity.
+### 2. VideoCombine
+- Convert image sequences (e.g., from AnimateDiff) into a video.
+- Supports multiple formats: MP4, AVI, MKV, MOV, WMV.
+- Optional "ping-pong" looping.
+- Customizable filename and output path.
 
-Video Combine Node (video_combine_node.py)
+## 📦 Installation
+Place these Python files into your `ComfyUI/custom_nodes` directory.
 
-Allows merging multiple video outputs into a single video.
-
-Supports customizable settings for video concatenation and encoding.
-
-These nodes significantly improve video workflow efficiency in ComfyUI, making batch processing and custom video handling more flexible.
-
-🔧 Installation & Usage
-
-Clone this repository into your ComfyUI custom nodes folder:
-
-bash
+## 🔧 Requirements
+Ensure you have OpenCV and other dependencies installed:
+```bash
 git clone https://github.com/JioJe/comfyui_video_BC
-Restart ComfyUI to load the new nodes.
