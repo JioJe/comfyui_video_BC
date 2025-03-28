@@ -1,0 +1,7 @@
+from .video_sequence_processor import NODE_CLASS_MAPPINGS as VIDEO_SEQUENCE_NODE
+from .video_combine_node import NODE_CLASS_MAPPINGS as VIDEO_COMBINE_NODE
+
+NODE_CLASS_MAPPINGS = {**VIDEO_SEQUENCE_NODE, **VIDEO_COMBINE_NODE}
+NODE_DISPLAY_NAME_MAPPINGS = {}
+
+__version__ = "1.0.0"
