@@ -24,6 +24,7 @@
 ```bash
 git clone https://github.com/JioJe/comfyui_video_BC
 ```
+B站节点讲解链接：https://www.bilibili.com/video/BV1heZVY3E8o/?spm_id_from=333.1387.homepage.video_card.click&vd_source=cfcf2acc406e911d0270e4c5832b80a8
 
 These are two custom nodes for [ComfyUI](https://github.com/comfyanonymous/ComfyUI) designed to streamline video workflows: one for batch loading video frames and one for saving image sequences as videos with custom settings.
 
