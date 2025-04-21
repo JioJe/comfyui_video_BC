@@ -26,6 +26,7 @@ class VideoSequenceProcessor:
                 "frames_per_video": ("INT", {"default": 8, "min": 1, "max": BIGMAX, "step": 1}),
                 "custom_width": ("INT", {"default": 0, "min": 0, "max": DIMMAX, "step": 8}),
                 "custom_height": ("INT", {"default": 0, "min": 0, "max": DIMMAX, "step": 8}),
+                "target_fps": ("INT", {"default": 30, "min": 1, "max": 60, "step": 1}),  # 新增参数
             },
         }
 
@@ -35,7 +36,7 @@ class VideoSequenceProcessor:
     CATEGORY = "加载器/视频"
 
     @classmethod
-    def process_sequence(cls, directory, mode="单个视频", video_index=0, frames_per_video=8, custom_width=0, custom_height=0):
+    def process_sequence(cls, directory, mode="单个视频", video_index=0, frames_per_video=8, custom_width=0, custom_height=0, target_fps=30):
         if not os.path.isdir(directory):
             raise ValueError(f"目录不存在: {directory}")
 
@@ -69,9 +70,14 @@ class VideoSequenceProcessor:
         if not cap.isOpened():
             raise ValueError(f"无法打开视频: {video_path}")
 
-        frames = []
+        video_fps = cap.get(cv2.CAP_PROP_FPS)  # 获取原视频的FPS
         frame_count = 0
+        frames = []
         while frame_count < frames_per_video:
+            # 设置视频帧读取的时间点
+            frame_pos = (frame_count * video_fps) / target_fps
+            cap.set(cv2.CAP_PROP_POS_FRAMES, frame_pos)
+            
             ret, frame = cap.read()
             if not ret:
                 break
