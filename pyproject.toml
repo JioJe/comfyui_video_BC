@@ -1,0 +1,16 @@
+[project]
+name = "comfyui_video_BC"
+description = "Batch load video nodes and save videos in custom paths"
+version = "1.0.0"
+license = {file = "LICENSE"}
+dependencies = ["opencv-python", "numpy", "torch", "Pillow"]
+
+[project.urls]
+Repository = "https://github.com/JioJe/comfyui_video_BC"
+#  Used by Comfy Registry https://registry.comfy.org
+
+[tool.comfy]
+PublisherId = "maque"
+DisplayName = "comfyui_video_BC"
+Icon = ""
+includes = []
