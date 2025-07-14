@@ -4,6 +4,16 @@
 
 ## 🧩 包含的节点
 
+##新增节点
+1. 批量文本读取（TextBatchLoader）
+> 功能：从指定文件夹一次性读取所有 .txt 文件，输出文本内容列表和对应文件名列表。适用于批量文本数据的自动化处理场景。
+2. 批量文本索引（TextBatchIndexer）
+> 功能：根据输入的索引，从批量文本和文件名列表中提取指定位置的文本内容和文件名。适合逐条遍历、单条处理等需求。
+3. 批量文本保存（TextBatchSaver）
+> 功能：将批量文本内容保存到指定目录，支持自定义文件名前缀、分隔符、数字填充、扩展名、编码、后缀等。可选择保留原文件名或自定义命名，输出所有保存文件的路径列表。
+4. 批量提示词替换（TextBatchReplace）
+> 功能：对批量文本内容进行多组关键词批量替换。支持在界面中直观填写多组“查找/替换”对，实现高效的批量文本内容修改。
+
 ### 1. VideoSequenceProcessor
 - 新增设置导入视频强制帧率选项
 - 从目录中的多个视频加载帧。
@@ -30,6 +40,16 @@ B站节点讲解链接：https://www.bilibili.com/video/BV1heZVY3E8o/?spm_id_fro
 These are two custom nodes for [ComfyUI](https://github.com/comfyanonymous/ComfyUI) designed to streamline video workflows: one for batch loading video frames and one for saving image sequences as videos with custom settings.
 
 ## 🧩 Nodes Included
+
+NEW
+1. TextBatchLoader
+> Function: Loads all .txt files from a specified folder in batch, outputs a list of text contents and corresponding filenames. Ideal for automated batch text processing.
+2. TextBatchIndexer
+> Function: Retrieves the text and filename at a specified index from batch lists. Useful for iterating or processing items one by one.
+3. TextBatchSaver
+> Function: Saves a batch of text contents to a target directory, supporting custom filename prefix, separator, zero-padding, extension, encoding, and suffix. Can use original filenames or custom naming. Outputs the list of saved file paths.
+4. TextBatchReplace
+> Function: Performs multiple keyword replacements on a batch of texts. Supports intuitive UI for entering multiple search/replace pairs, enabling efficient batch text modification.
 
 ### 1. VideoSequenceProcessor
 - Load frames from multiple videos in a directory.
