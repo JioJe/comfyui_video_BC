@@ -4,7 +4,7 @@
 
 ## 🧩 包含的节点
 
-##新增节点
+##新增节点(2025/7/14)
 1. 批量文本读取（TextBatchLoader）
 > 功能：从指定文件夹一次性读取所有 .txt 文件，输出文本内容列表和对应文件名列表。适用于批量文本数据的自动化处理场景。
 2. 批量文本索引（TextBatchIndexer）
@@ -42,7 +42,7 @@ These are two custom nodes for [ComfyUI](https://github.com/comfyanonymous/Comfy
 ## 🧩 Nodes Included
 
 NEW
-1. TextBatchLoader
+1. TextBatchLoader(2025/7/14)
 > Function: Loads all .txt files from a specified folder in batch, outputs a list of text contents and corresponding filenames. Ideal for automated batch text processing.
 2. TextBatchIndexer
 > Function: Retrieves the text and filename at a specified index from batch lists. Useful for iterating or processing items one by one.
