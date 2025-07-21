@@ -1,7 +1,7 @@
 [project]
 name = "comfyui_video_BC"
-description = "Batch load video nodes and save videos in custom paths"
-version = "1.0.0"
+description = "Bulk text series update"
+version = "1.1.0"
 license = {file = "LICENSE"}
 dependencies = ["opencv-python", "numpy", "torch", "Pillow"]
 
